@@ -9,6 +9,10 @@ app.use(
 );
 app.use(bodyParser.json());
 
+app.use("/cliente", require("./routes/cliente"));
+app.use("/comercial", require("./routes/comercial"));
+app.use("/pedido", require("./routes/pedido"));
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT);
 
