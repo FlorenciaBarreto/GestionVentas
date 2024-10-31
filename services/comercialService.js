@@ -34,11 +34,33 @@ async function createNewComercial(comercial){
 }
 
 
+//Modificar Comercial
+async function modifyComercial(comercial) {
+    let sql = "UPDATE comercial SET nombre='" + comercial.nombre + "', apellido1='" + comercial.apellido1 + "', apellido2='" + comercial.apellido2 + "', comision='" + comercial.comision + "' WHERE id=" + comercial.id + ";";
+
+    console.debug("La consulta en SQL es: " + sql);
+    const rows = await db.query(sql);
+    const info = helper.emptyOrRows(rows);
+    return{info};
+}
+
+
+//Borrar Comercial
+async function deleteComercial(id) {
+    let sql = "DELETE FROM comercial WHERE id='"+ id +"';"
+
+    console.debug("La consulta en SQL es: " + sql);
+    const rows = await db.query(sql);
+    const info = helper.emptyOrRows(rows);
+    return{info};
+}
+
+
 //cambiar nombres de las funciones
 module.exports = {
     getComercialFullList,
     getOneComercial,
-    createNewComercial
-
-   
+    createNewComercial,
+    deleteComercial,
+    modifyComercial   
   }
