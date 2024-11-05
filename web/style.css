@@ -1,0 +1,24 @@
+
+
+/* Estilo general para la tabla */
+table {
+    width: 80%; /* O puedes poner un valor fijo, como '600px' */
+    border-collapse: collapse; /* Para que las bordes se fusionen */
+    margin: 20px 0; /* Espacio alrededor de la tabla */
+    background-color: #d1b6c842; /* Color de fondo de la tabla */
+    
+  }
+  
+  /* Estilo para las celdas de la tabla */
+  th, td {
+    padding: 10px; /* Espaciado dentro de las celdas */
+    text-align: center; /* Alineación del texto */
+    border: 2px solid black; /* Bordes sutiles */
+  }
+  
+  /* Estilo para los encabezados (th) */
+  th {
+    background-color: #f2acd5; /* Color de fondo de los encabezados */
+    color: black; /* Color del texto */
+    font-weight: bold; /* Negrita */
+  }
