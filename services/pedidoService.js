@@ -35,7 +35,7 @@ async function getPedidoPorIdDelCliente(id_cliente){
 
 //Get pedido por id del comercial
 async function getPedidoPorIdDelComercial(id_comercial){
-  let sql = "SELECT * FROM pedido WHERE id_cliente=" + id_comercial + ";";
+  let sql = "SELECT * FROM pedido WHERE id_comercial=" + id_comercial + ";";
   
   console.debug("La consulta en SQL es: " + sql);
   const rows = await db.query(sql);
@@ -46,7 +46,7 @@ async function getPedidoPorIdDelComercial(id_comercial){
 
 //Crear nuevo Pedido
 async function createNewPedido(pedido){
-  let sql = "INSERT INTO comercial (total, fecha, id_cliente, id_comercial) VALUES (";
+  let sql = "INSERT INTO pedido (total, fecha, id_cliente, id_comercial) VALUES (";
   sql += "'" + pedido.total + "', '" + pedido.fecha + "', '" + pedido.id_cliente + "', '" + pedido.id_comercial + "');";
       
   console.debug("La consulta en SQL es: " + sql);

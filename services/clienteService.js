@@ -26,7 +26,7 @@ async function getOneClient(id){
 //Crear nuevo cliente
 async function createNewClient(cliente){
   let sql = "INSERT INTO cliente (nombre, apellido1, apellido2, ciudad, categoria) VALUES (";
-  sql += "'" + cliente.nombre + "', '" + cliente.apellido1 + "', '" + cliente.apellido2 + "', '" + cliente.ciudad + "', '" + cliente.categoria + ");";
+  sql += "'" + cliente.nombre + "', '" + cliente.apellido1 + "', '" + cliente.apellido2 + "', '" + cliente.ciudad + "', '" + cliente.categoria + "');";
       
   console.debug("La consulta en SQL es: " + sql);
   const rows = await db.query(sql);
@@ -47,7 +47,7 @@ async function deleteClient(id) {
 
 //Modificar Comercial
 async function modifyClient(cliente) {
-  let sql = "UPDATE cliente SET nombre='" + cliente.nombre + "', apellido1='" + cliente.apellido1 + "', apellido2='" + cliente.apellido2 + "', ciudad='" + cliente.ciudad + "', categoria='" + cliente.categoria + "' WHERE id=" + comercial.id + ";";
+  let sql = "UPDATE cliente SET nombre='" + cliente.nombre + "', apellido1='" + cliente.apellido1 + "', apellido2='" + cliente.apellido2 + "', ciudad='" + cliente.ciudad + "', categoria='" + cliente.categoria + "' WHERE id=" + cliente.id + ";";
 
   console.debug("La consulta en SQL es: " + sql);
   const rows = await db.query(sql);
