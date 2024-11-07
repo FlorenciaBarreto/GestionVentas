@@ -12,7 +12,7 @@
     <div>
         <button onclick="buscar();">Buscar</button>
     </div>
-
+    <h3>LISTA DE COMERCIALES</h3>
     <div id="error">Error.</div>
 
     <table>
@@ -23,16 +23,38 @@
                 <th>Apellido1</th>
                 <th>Apellido2</th>
                 <th>Comisión</th>
-            </tr>
-            
+            </tr>            
         </thead>
+
         <tbody id="resultados">
             <tr></tr>
             <tr></tr>
             <tr></tr>
         </tbody>
     </table>
-    
+    <br>
+    <h3>BUSQUEDA DE COMERCIAL POR ID</h3>
+    <div>
+        <label for="identificador">Ingresar el ID</label>
+        <input type="number" id="identificador" name="identificador">
+        <button onclick="buscarId();">Buscar ID</button><br>
+        <br><br>
+        <div id="resComercial">
+            <fieldset>
+                <legend id="legend1"></legend>
+                <label class="izq" for="id_comercial">ID: </label>
+                <input class="izq" id="id_comercial" disabled><br>
+                <label class="izq" for="nombre">Nombre: </label>
+                <input class="izq" id="nombre" disabled><br>
+                <label class="izq" for="apellido1">Apellido1: </label>
+                <input class="izq" id="apellido1" disabled><br>
+                <label class="izq" for="apellido2">Apellido2: </label>
+                <input class="izq" id="apellido2" disabled><br>
+                <label class="izq" for="comision">Comision: </label>
+                <input class="izq" id="comision" disabled><br>
+            </fieldset>            
+        </div>
+    </div>
 
 
 

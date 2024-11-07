@@ -1,24 +1,40 @@
+#error{
+  padding: 2px;
+  margin-top: 10px;
+  border-bottom: 3px solid #d1b6c8a0;
+  width: 70%;
+  font-size: larger;
+}
+
+button{
+  width: 5rem;
+  height: 2rem;
+  border-radius: 5px;
+}
 
 
-/* Estilo general para la tabla */
 table {
-    width: 80%; /* O puedes poner un valor fijo, como '600px' */
-    border-collapse: collapse; /* Para que las bordes se fusionen */
-    margin: 20px 0; /* Espacio alrededor de la tabla */
-    background-color: #d1b6c842; /* Color de fondo de la tabla */
-    
+    width: 70%; 
+    border-collapse: collapse; 
+    margin: 20px 0; 
+    background-color: #d1b6c842;     
   }
   
-  /* Estilo para las celdas de la tabla */
+  
   th, td {
-    padding: 10px; /* Espaciado dentro de las celdas */
-    text-align: center; /* Alineación del texto */
-    border: 2px solid black; /* Bordes sutiles */
+    padding: 10px; 
+    text-align: center; 
+    border: 2px solid black; 
   }
   
-  /* Estilo para los encabezados (th) */
+  
   th {
-    background-color: #f2acd5; /* Color de fondo de los encabezados */
-    color: black; /* Color del texto */
-    font-weight: bold; /* Negrita */
+    background-color: #f2acd5; 
+    color: black; 
+    font-weight: bold; 
+  }
+
+  fieldset{
+    width: 40%;
+    border-radius: 5px;
   }

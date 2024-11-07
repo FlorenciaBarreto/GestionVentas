@@ -179,9 +179,9 @@ router.post("/", async function(req,res){
     if(total){
         newPedido={
             total: total,
-            fecha: fecha!=undefined? fecha : null,
-            id_cliente: id_cliente!=undefined? id_cliente : null,            
-            id_comercial: id_comercial!=undefined? id_comercial : null            
+            fecha: fecha!=undefined? fecha : 0,
+            id_cliente: id_cliente!=undefined? id_cliente : 0,            
+            id_comercial: id_comercial!=undefined? id_comercial : 0            
         }
     } else {
         code=400;
