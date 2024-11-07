@@ -6,8 +6,11 @@
   font-size: larger;
 }
 
-button{
-  width: 5rem;
+h3{
+  border-bottom: 3px double #d1b6c8a0;
+}
+
+button{  
   height: 2rem;
   border-radius: 5px;
 }
@@ -38,3 +41,8 @@ table {
     width: 40%;
     border-radius: 5px;
   }
+
+  fieldset>input{
+    width: 60%;
+  }
+

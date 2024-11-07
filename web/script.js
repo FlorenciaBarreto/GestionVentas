@@ -1,8 +1,6 @@
 
 
-function buscar(){
-    alert("hola");
-    
+function buscar(){    
     const errorElement = document.getElementById("error");
 
     //creamos la url del servicio
@@ -83,7 +81,9 @@ function buscarId(){
     })
 
 
+function createComercial(){
 
+}
 
 
 

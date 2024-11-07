@@ -9,11 +9,12 @@
 </head>
 <body>
     <h1>Página de Búsqueda</h1>
-    <div>
-        <button onclick="buscar();">Buscar</button>
-    </div>
-    <h3>LISTA DE COMERCIALES</h3>
     <div id="error">Error.</div>
+    
+    <h3>LISTA DE COMERCIALES</h3>    
+    <div>
+        <button onclick="buscar();">Lista de Comerciales</button>
+    </div>
 
     <table>
         <thead>
@@ -33,15 +34,15 @@
         </tbody>
     </table>
     <br>
-    <h3>BUSQUEDA DE COMERCIAL POR ID</h3>
-    <div>
+    <h3 class="derecha">BUSQUEDA DE COMERCIAL POR ID</h3>
+    <div class="derecha">
         <label for="identificador">Ingresar el ID</label>
         <input type="number" id="identificador" name="identificador">
         <button onclick="buscarId();">Buscar ID</button><br>
         <br><br>
         <div id="resComercial">
             <fieldset>
-                <legend id="legend1"></legend>
+                <legend id="legend1">Buscar</legend>
                 <label class="izq" for="id_comercial">ID: </label>
                 <input class="izq" id="id_comercial" disabled><br>
                 <label class="izq" for="nombre">Nombre: </label>
@@ -56,7 +57,23 @@
         </div>
     </div>
 
-
+    <h3>CREAR UN NUEVO COMERCIAL</h3>
+    <div>
+        <fieldset>
+            <legend>Ingrese los Datos</legend>
+            <label class="izq" for="create_id_comercial">ID: </label>
+            <input class="izq" id="create_id_comercial" ><br>
+            <label class="izq" for="create_nombre">Nombre: </label>
+            <input class="izq" id="create_nombre" required><br>
+            <label class="izq" for="create_apellido1">Apellido1: </label>
+            <input class="izq" id="create_apellido1" required><br>
+            <label class="izq" for="create_apellido2">Apellido2: </label>
+            <input class="izq" id="create_apellido2" ><br>
+            <label class="izq" for="create_comision">Comision: </label>
+            <input class="izq" id="create_comision" ><br>
+        </fieldset>
+        <button onclick="createComercial()">Crear</button>
+    </div>
 
     
 </body>
