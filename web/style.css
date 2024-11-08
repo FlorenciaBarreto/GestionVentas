@@ -37,12 +37,35 @@ table {
     font-weight: bold; 
   }
 
-  fieldset{
+  #fieldset1{
     width: 40%;
     border-radius: 5px;
   }
 
   fieldset>input{
-    width: 60%;
+    width: 70%;
   }
 
+  .grid-container {
+    display: grid;
+    grid-template-columns: 30% 70%;
+  }
+
+  .fila1{
+    grid-column:1;
+  }
+
+  .fila2{
+    grid-column: 2;  
+  }
+
+  #fondo-form{
+    width: 60%;
+    background-color: #d1b6c842;
+    margin:0 auto;
+  }
+
+ #fondo-form>fieldset{
+  margin: 0 auto;
+  width: 80%;
+ }

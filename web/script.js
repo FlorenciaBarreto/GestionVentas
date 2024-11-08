@@ -81,9 +81,7 @@ function buscarId(){
     })
 
 
-function createComercial(){
 
-}
 
 
 
