@@ -4,8 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
-    <script src="formScript.js"></script>
+    <script src="script.js"></script>
+    <script src="formScript.js" type="module"></script>
+    <script src="utilidades.js" type="module"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"> 
+    <!-- link a font-awesome arriba -->
 </head>
 <body>
     <a href="index.html"><h3>Volver a la Página de Inicio</h3></a>
@@ -28,6 +32,12 @@
             <button type="submit">Crear</button>
             <button type="reset">Limpiar</button> 
         </form>    
+</div>
+<div>
+    <h4>Comercial Creado</h4>
+    <p id="comercialCreado"></p>
+    <h4>Valor del Error:</h4>
+    <p id="error"></p>
 </div>
 
 

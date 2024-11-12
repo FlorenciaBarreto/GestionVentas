@@ -1,5 +1,4 @@
-
-
+window.buscar=buscar;
 function buscar(){    
     const errorElement = document.getElementById("error");
 
@@ -16,41 +15,43 @@ function buscar(){
             const arrayComercial = data.info;
             rellenarTabla(arrayComercial);
 
-
             errorElement.textContent="Hemos recuperado el json";
         }
     ).catch(error=>{
         console.error("error en catch: " + error);
         errorElement.textContent = "Error fetchin data " + error.message;
-    })
-
-   
+    })   
 }
 
-function rellenarTabla(data){    //data es un array de datos que hay que pintar
+function rellenarTabla(data){                                    //data es un array de datos que hay que pintar
     let table = document.getElementById("resultados");
     table.innerHTML="";
 
     let out="";
     for(let item of data){
-        out += "<tr>";
+        out += '<tr>';
 
         for (let value of Object.values(item)){
-            out += "<td>" + value + "</td>";
+            out += '<td>' + value + '</td>';
         }      
 
-        out += "</tr>"
+        out += '<td onclick="buscarId(' + item.id + ')">Detalle</td>';
+        out += '<td><i class="fa-solid fa-trash" style="color: #f2acd5;"></i></td>';
+
+        out += '</tr>';
     }
 
     table.innerHTML=out;
 }
 
-function buscarId(){
+
+
+function buscarId(id){
     const errorElement = document.getElementById("error");
     
     let url= "http://localhost:3000/comercial/";
     let idIngresado = document.getElementById("identificador");
-    url+=idIngresado.value;
+    url+=id;
     alert(url);
 
     fetch(url, {method: 'GET'}).then(
@@ -79,11 +80,4 @@ function buscarId(){
         console.error("error en comercial: " + error);
         errorElement.textContent = "Error fetchin comercial data " + error.message;
     })
-
-
-
-
-
-
-
 }

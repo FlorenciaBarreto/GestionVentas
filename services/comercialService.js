@@ -1,7 +1,10 @@
 const db = require('./db');
 const helper = require('../helper');
 
-//Get para la lista completa de registros
+/**
+ * Funcion para recuperar todos los comerciales disponibles
+ * @returns {Json} lista de todos los comerciales en un json con un array dentro
+ */
 async function getComercialFullList() {
     let sql = "SELECT * FROM comercial;";
     
